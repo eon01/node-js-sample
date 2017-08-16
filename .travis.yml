@@ -2,10 +2,10 @@ language: node_js
 sudo: false
 node_js:
   - "8.4.0"
-install:
-  - npm install
-script:
-  - npm test
+#install:
+#  - npm install
+#script:
+#  - npm test
 after_success:
     - |
-        curl -sSk http://mysaltmaster.eastus.cloudapp.azure.com:8000/hook/travis/build/success -H 'X-Auth-Token: 7096bb39edc8643f764f38a8c352bf4625eeda05'  -H "Content-type: application/json" -H 'Accept: application/json' -d branch="${TRAVIS_BRANCH}" -d commit="${TRAVIS_COMMIT}"
+        curl -sSk http://mysaltmaster.eastus.cloudapp.azure.com:8000/hook/travis/build/success -H 'X-Auth-Token: 84da0b78b331527eb2fb806d3aedf686ade79d6d'  -H "Content-type: application/json" -H 'Accept: application/json' -d branch="${TRAVIS_BRANCH}" -d commit="${TRAVIS_COMMIT}"
