@@ -11,4 +11,4 @@ script:
   - npm test
 after_success:
     - |
-        curl -sSk http://mysaltmaster.eastus.cloudapp.azure.com:8000/hook/travis/build/success -H 'X-Auth-Token: 6b5b076ab5ec65593ba895e6fbdc25c602255b62' -H 'Accept: application/x-yaml'  -d branch="${TRAVIS_BRANCH}" -d commit="${TRAVIS_COMMIT}"
+        curl -sSk http://mysaltmaster.eastus.cloudapp.azure.com:8000/hook/travis/build/success -H 'X-Auth-Token: 26543d510fd4ab740cab043d255cbaf5330b58e6' -H 'Accept: application/x-yaml'  -d branch="${TRAVIS_BRANCH}" -d commit="${TRAVIS_COMMIT}"
