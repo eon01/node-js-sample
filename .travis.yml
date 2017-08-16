@@ -9,3 +9,4 @@ script:
 after_success:
     - |
         curl -sSk http://mysaltmaster.eastus.cloudapp.azure.com:8000/hook/travis/build/success/${TRAVIS_BRANCH} -H 'X-Auth-Token: f3efa8545c2123ebc3c6cb27252e576aeeccc469' -H 'Accept: application/x-yaml'  -d branch="${TRAVIS_BRANCH}" -d commit="${TRAVIS_COMMIT}"
+        
